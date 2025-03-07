@@ -5,6 +5,7 @@ const List = () => {
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
+	console.log(`${import.meta.env.VITE_API_URL}/api/boxes`)
     fetch(`${import.meta.env.VITE_API_URL}/api/boxes`)
       .then((res) => res.json())
       .then((data) => {
