@@ -45,17 +45,13 @@ const Form = () => {
         body: JSON.stringify(newBox),
       });
       const data = await response.json();
-      if (data.success) {
-        setSuccess(true);
-        setTimeout(() => setSuccess(false), 2000);
-        setName("");
-        setWeight("");
-        setColor("#ffffff");
-        setDestination("Sweden");
-        setError("");
-      } else {
-        setError(data.message || "Failed to add box.");
-      }
+      setSuccess(true);
+      setTimeout(() => setSuccess(false), 2000);
+      setName("");
+      setWeight("");
+      setColor("#ffffff");
+      setDestination("Sweden");
+      setError("");
     } catch {
       setError("Error connecting to the server");
     }
