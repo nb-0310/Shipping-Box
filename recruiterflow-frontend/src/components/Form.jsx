@@ -31,7 +31,7 @@ const Form = () => {
     }
 
     try {
-      const response = await fetch(`${import.meta.env.REACT_APP_API_URL}/api/boxes`, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/boxes`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newBox),
